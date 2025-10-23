@@ -1,0 +1,32 @@
+# comment: sweep for figure 6 (but not gradient descent)
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
+method: grid
+parameters:
+  seed:
+    values: [0,1,2,3,4]
+  T:
+    values: [1000]
+  D:
+    values: [100]
+  mode:
+    values: ["online"]
+  g:
+    values: [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]
+  alg:
+    values: ["seq", "quasi", "deer"]
+  tol:
+    values: [1e-4]
+  nreps:
+    values: [5]
+  nwarmups:
+    values: [2]
+
+
+program: fig6.py
+project: predictability
+
+name: fig6_no_gd

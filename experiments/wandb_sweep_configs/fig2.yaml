@@ -1,0 +1,26 @@
+# comment: Figure2
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
+method: grid
+parameters:
+  seed:
+    values: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19] 
+  T_min:
+    values: [10]
+  T_max:
+    values: [10000]
+  num_Ts:
+    values: [50]
+  D:
+    values: [100]
+  num_gs:
+    values: [50]
+  when:
+    values: ["before"]
+program: fig2.py
+project: predictability
+
+name: fig2

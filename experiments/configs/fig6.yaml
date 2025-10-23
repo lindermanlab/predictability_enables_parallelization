@@ -1,0 +1,14 @@
+# comment: fig6 (all algorithms)
+seed: 0
+T: 1000
+T_min: 10
+num_Ts: 5
+D: 100
+mode: "offline"
+g: 0.5
+alg: "gd" # "seq", "gd", "quasi", or "deer"
+tol: 1e-4
+gd_step_size : 0.25 # step size for gradient descent
+
+nreps: 5
+nwarmups: 2

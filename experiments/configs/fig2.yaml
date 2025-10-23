@@ -1,0 +1,13 @@
+# proto config for fig2.py
+seed: 0
+D: 100
+nonlin_str: "tanh"
+num_gs: 10
+mode: "online"
+g_min: 0.5
+g_max: 2.
+T_min: 10
+T_max: 3000
+num_Ts: 3
+when: "before"
+tol: 1e-10

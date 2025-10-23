@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "src"
+version = "0.1.0"
+description = "Predictability Enables Parallelization in Nonlinear State Space Models"
+dependencies = [
+    "equinox",
+    "ipykernel",
+    "matplotlib",
+    "tqdm",
+    "scipy",
+    "wandb==0.21.4",
+    "hydra-core",
+    "lightning",
+    "packaging", # to make the jax installs happy
+    "seaborn",
+]
+
+[tool.setuptools]
+packages = { find = { where = ["src"] } }

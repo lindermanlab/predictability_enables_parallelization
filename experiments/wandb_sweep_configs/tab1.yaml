@@ -1,0 +1,30 @@
+# comment: Table1
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args_no_hyphens}
+method: grid
+parameters:
+  seed:
+    values: [42]
+  system_name:
+    values: ["ABC", "Chua", "Thomas", "NH", "Kawczynski-Strizhak", "Lorenz", "Rossler", "SprottB", "Vallis El Nino"]
+  T_max:
+    values: [30000]
+  dt:
+    values: [0.01]
+  alg:
+    values: ["deer"]
+  mode:
+    values: ["online"]
+  observer_flag:
+    values: [True, False]
+  nwarmups:
+    values: [5]
+  nreps:
+    values: [5]
+program: tab1.py
+project: predictability
+
+name: Tabl1

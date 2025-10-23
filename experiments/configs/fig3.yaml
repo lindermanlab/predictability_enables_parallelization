@@ -1,0 +1,7 @@
+# proto config for fig3.py (2-well experiment)
+seed: 42
+mode: "offline"
+T_min: 20
+T_max: 100
+num_Ts: 3
+tol: 1e-10
