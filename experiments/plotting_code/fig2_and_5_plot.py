@@ -1,5 +1,5 @@
 """
-Code to plot Figures 2 and 4.
+Code to plot Figures 2 and 5.
 """
 import argparse
 import numpy as np
@@ -40,7 +40,7 @@ def main(filepath):
         with open(filepath + f"threshold_D_100_when_before_seed_{seed}.pkl", "rb") as f:
             data = pickle.load(f)
         Ts = data["Ts"]
-        lles = data["results"][0, :, 0]  # shape (n_g,)
+        lles = data["results"][0, :, -1]  # shape (n_g,). Pick the last time point to compute LLEs
         all_lles.append(lles)
         bounded = np.minimum(data["results"][1], Ts)
         Zs.append(bounded)
@@ -52,7 +52,7 @@ def main(filepath):
     min_lles = np.min(all_lles, axis=0)
     max_lles = np.max(all_lles, axis=0)
 
-    #  this is Figure 4
+    #  this is Figure 5
     plt.plot(gs, median_lles, label="Median LLE")
     plt.fill_between(gs, min_lles, max_lles, color="gray", alpha=0.3, label="Min-Max range")
     plt.xlabel("g")
@@ -60,7 +60,7 @@ def main(filepath):
     plt.legend()
     plt.axhline(y=0, color="k", linestyle="--")
     plt.title(rf"Median LLE over {NUM_SEEDS} seeds with Min-Max range, $D$={D}")
-    plt.savefig("./fig4.pdf", bbox_inches="tight", pad_inches=0.02)
+    plt.savefig("./fig5.pdf", bbox_inches="tight", pad_inches=0.02)
 
     ###############################################
     # this is Figure 2  
