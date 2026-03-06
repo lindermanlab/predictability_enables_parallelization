@@ -1,5 +1,7 @@
 # Predictability Enables Parallelization of Nonlinear State Space Models
 
+**Check out an even simpler [quickstart-repo](https://github.com/lindermanlab/micro_deer/tree/main), including this [quickstart-notebook](https://github.com/lindermanlab/micro_deer/blob/main/nbs/demo.ipynb)**
+
 ![Fig1](./ims/deer_vs_seq_2x2_done.gif)
 
 **Predictability Enables Parallelization of Nonlinear State Space Models**\
